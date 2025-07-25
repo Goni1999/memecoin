@@ -56,7 +56,7 @@ const BuyTokens = () => {
   }
 
   const handleBuyClick = () => {
-    const tokenAddress = '8AtrgNrTChVp8yjEr5LTh9V5cYFzVAGt7XvFap1aMRie'
+    const tokenAddress = 'x'
     const raydiumUrl = `https://raydium.io/swap/?inputMint=sol&outputMint=${tokenAddress}`
     
     // Open Raydium in a new tab

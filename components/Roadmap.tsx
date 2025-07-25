@@ -153,7 +153,7 @@ const Roadmap = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
-                href="https://raydium.io/swap/?inputMint=sol&outputMint=8AtrgNrTChVp8yjEr5LTh9V5cYFzVAGt7XvFap1aMRie"
+                href="https://raydium.io/swap/?inputMint=sol&outputMint=x"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gradient-to-r from-primary-400 to-primary-500 text-black font-bold py-3 px-6 rounded-lg hover:scale-105 transition-all duration-300 shadow-lg shadow-primary-400/25 text-sm"

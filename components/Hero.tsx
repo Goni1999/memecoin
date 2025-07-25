@@ -24,7 +24,7 @@ const Hero = () => {
   // Function to open Raydium swap for SOLMEME token
   const handleBuyTokens = () => {
     // Replace 'YOUR_TOKEN_ADDRESS_HERE' with your actual token contract address
-    const tokenAddress = '8AtrgNrTChVp8yjEr5LTh9V5cYFzVAGt7XvFap1aMRie'
+    const tokenAddress = 'x'
     const raydiumUrl = `https://raydium.io/swap/?inputMint=sol&outputMint=${tokenAddress}`
     
     // Open Raydium in a new tab

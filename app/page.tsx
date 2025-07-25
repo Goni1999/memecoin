@@ -80,6 +80,7 @@ export default function Home() {
     <main className="min-h-screen bg-dark-900">
       <Navbar />
       <Hero />
+      <BuyTokens />
       <Featured />
       <Stats />
       <Features />
