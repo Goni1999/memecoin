@@ -176,7 +176,7 @@ const BuildForGrowth = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://jup.ag/"
+                href="https://raydium.io/swap/?inputMint=sol&outputMint=8AtrgNrTChVp8yjEr5LTh9V5cYFzVAGt7XvFap1aMRie"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gradient-to-r from-primary-400 to-primary-500 text-black font-bold py-4 px-8 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg shadow-primary-400/25"

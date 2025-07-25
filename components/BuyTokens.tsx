@@ -56,9 +56,11 @@ const BuyTokens = () => {
   }
 
   const handleBuyClick = () => {
-    if (typeof window !== 'undefined' && (window as any).openModal) {
-      (window as any).openModal()
-    }
+    const tokenAddress = '8AtrgNrTChVp8yjEr5LTh9V5cYFzVAGt7XvFap1aMRie'
+    const raydiumUrl = `https://raydium.io/swap/?inputMint=sol&outputMint=${tokenAddress}`
+    
+    // Open Raydium in a new tab
+    window.open(raydiumUrl, '_blank', 'noopener,noreferrer')
   }
 
 

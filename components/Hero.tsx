@@ -21,6 +21,16 @@ const Hero = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove)
   }, [])
 
+  // Function to open Raydium swap for SOLMEME token
+  const handleBuyTokens = () => {
+    // Replace 'YOUR_TOKEN_ADDRESS_HERE' with your actual token contract address
+    const tokenAddress = '8AtrgNrTChVp8yjEr5LTh9V5cYFzVAGt7XvFap1aMRie'
+    const raydiumUrl = `https://raydium.io/swap/?inputMint=sol&outputMint=${tokenAddress}`
+    
+    // Open Raydium in a new tab
+    window.open(raydiumUrl, '_blank', 'noopener,noreferrer')
+  }
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Advanced 3D Background */}
@@ -153,12 +163,7 @@ const Hero = () => {
           {/* Enhanced CTA Buttons with 3D Effects */}
           <div className={`flex flex-col sm:flex-row gap-6 mb-16 justify-center items-center transition-all duration-1000 ${isLoaded ? 'animate-fade-up animate-stagger-4' : 'opacity-0 translate-y-20'}`}>
             <button
-              onClick={() => {
-                const element = document.getElementById('buy-tokens');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
+              onClick={handleBuyTokens}
               className="group relative bg-gradient-to-r from-primary-400 via-primary-500 to-secondary-600 text-black font-black text-lg px-10 py-5 rounded-xl overflow-hidden transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-primary-400/25 transform-gpu"
             >
               <span className="relative z-10 flex items-center">

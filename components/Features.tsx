@@ -491,7 +491,7 @@ const Features = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <a
-                  href="https://jup.ag"
+                  href="https://raydium.io/swap/?inputMint=sol&outputMint=8AtrgNrTChVp8yjEr5LTh9V5cYFzVAGt7XvFap1aMRie"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative bg-gradient-to-r from-primary-400 via-primary-500 to-secondary-600 text-black font-black text-lg px-10 py-5 rounded-xl overflow-hidden transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-primary-400/25 transform-gpu"

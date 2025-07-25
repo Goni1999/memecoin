@@ -152,12 +152,14 @@ const Roadmap = () => {
               Be part of the most ambitious meme coin project on Solana.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button
-                onClick={() => (window as any).openModal?.()}
+              <a
+                href="https://raydium.io/swap/?inputMint=sol&outputMint=8AtrgNrTChVp8yjEr5LTh9V5cYFzVAGt7XvFap1aMRie"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-gradient-to-r from-primary-400 to-primary-500 text-black font-bold py-3 px-6 rounded-lg hover:scale-105 transition-all duration-300 shadow-lg shadow-primary-400/25 text-sm"
               >
                 Buy $SOLMEME
-              </button>
+              </a>
               <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-black font-bold py-3 px-6 rounded-lg transition-all duration-300 text-sm">
                 Follow Updates
               </button>

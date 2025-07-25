@@ -17,13 +17,23 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-        const navigationItems = [
-        { name: 'Learn', href: '/learn' },
-        { name: 'Developers', href: '/developers' },
-        { name: 'Solutions', href: '/solutions' },
-        { name: 'Network', href: '/network' },
-        { name: 'Community', href: '/community' },
-      ]
+  // Function to open Raydium swap for SOLMEME token
+  const handleBuyTokens = () => {
+    // Replace 'YOUR_TOKEN_ADDRESS_HERE' with your actual token contract address
+    const tokenAddress = '8AtrgNrTChVp8yjEr5LTh9V5cYFzVAGt7XvFap1aMRie'
+    const raydiumUrl = `https://raydium.io/swap/?inputMint=sol&outputMint=${tokenAddress}`
+    
+    // Open Raydium in a new tab
+    window.open(raydiumUrl, '_blank', 'noopener,noreferrer')
+  }
+
+  const navigationItems = [
+    { name: 'Learn', href: '/learn' },
+    { name: 'Developers', href: '/developers' },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'Network', href: '/network' },
+    { name: 'Community', href: '/community' },
+  ]
 
   return (
     <nav
@@ -35,19 +45,19 @@ const Navbar = () => {
     >
       <div className="container-custom">
         <div className="flex items-center justify-between py-5">
-                                {/* Logo */}
-                      <Link
-                        href="/"
-                        className="flex items-center space-x-3 text-white font-bold text-xl hover:opacity-80 transition-opacity"
-                      >
-                        <Image
-                          src="/solmeme-logo.png"
-                          alt="SOLMEME Logo"
-                          width={200}
-                          height={200}
-                          className="w-200 h-200 object-contain"
-                        />
-              </Link>
+          {/* Logo */}
+          <Link
+            href="/"
+            className="flex items-center space-x-3 text-white font-bold text-xl hover:opacity-80 transition-opacity"
+          >
+            <Image
+              src="/solmeme-logo.png"
+              alt="SOLMEME Logo"
+              width={200}
+              height={200}
+              className="w-200 h-200 object-contain"
+            />
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
@@ -63,19 +73,14 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Desktop CTA Buttons */}
+          {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-                        <button
-                          onClick={() => {
-                            const element = document.getElementById('buy-tokens');
-                            if (element) {
-                              element.scrollIntoView({ behavior: 'smooth' });
-                            }
-                          }}
-                          className="btn btn-primary text-sm"
-                        >
-                          BUY TOKENS
-                        </button>
+            <button
+              onClick={handleBuyTokens}
+              className="btn btn-primary text-sm hover:scale-105 transition-transform duration-200"
+            >
+              BUY SOLMEME
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -120,19 +125,18 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
+            
+            {/* Mobile CTA Button */}
             <div className="flex flex-col space-y-3 pt-4">
-                          <button
-                            onClick={() => {
-                              const element = document.getElementById('buy-tokens');
-                              if (element) {
-                                element.scrollIntoView({ behavior: 'smooth' });
-                              }
-                              setIsMobileMenuOpen(false);
-                            }}
-                            className="btn btn-primary w-full justify-center"
-                          >
-                            BUY TOKENS
-                          </button>
+              <button
+                onClick={() => {
+                  handleBuyTokens()
+                  setIsMobileMenuOpen(false)
+                }}
+                className="btn btn-primary w-full justify-center hover:scale-105 transition-transform duration-200"
+              >
+                BUY SOLMEME
+              </button>
             </div>
           </div>
         </div>
